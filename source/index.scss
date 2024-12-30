@@ -1,0 +1,79 @@
+@import "./styles/branding.scss";
+
+
+
+
+
+.hw_navigation {
+    .hw_navlink {
+        color: $color-primary-dark;
+        .hw_svgicon__fill {
+            fill: $color-primary-dark !important;
+        }
+        svg {
+            border-color: $color-primary-dark !important;   
+        }
+    }
+    &--dark .hw_navlink {
+        color: $color-primary-light;
+        .hw_svgicon__fill {
+            fill: $color-primary-light !important;
+        }
+        svg {
+            border-color: $color-primary-light !important;   
+        }
+    }
+}
+.hw_navlink svg {
+    margin-top: 1px;
+    padding-bottom: 2px;
+    border-width: 2.5px !important;
+}
+.hw_navlink--active {
+    color: $color-secondary;
+    .hw_svgicon__fill {
+        fill: $color-secondary !important;
+    }
+    svg {
+        border-color: $color-secondary !important;   
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Darumadrop" !important;
+}
+.hw_footer {
+    background-color: $color-secondary;
+    .hw_backtotop__text { color: $color-primary-light !important;}
+    .hw_svg__fill { fill: $color-primary-light; }
+    .hw_copyright p {
+        color: $color-primary-light;
+    }
+    .hw_heading {
+        color: $color-primary-light
+    }
+    @media only screen and (max-width: 744px) {
+        .hw_navigation a { color: $color-primary-dark;}
+    }
+    .hw_navigation a { color: $color-primary-light;}
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+    opacity: 0.5;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $color-secondary-faded;
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+    border-radius: 2px;
+    opacity: 0.5;
+  }
