@@ -1,0 +1,18 @@
+.hw_header {
+    height: 70px;
+    @media only screen and (min-width: 740px) { height: 80px; }
+    @media only screen and (min-width: 1440px) { height: 85px; }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
+    &__logo {
+        padding: 13px;
+    }
+    &__niteswitch {
+        margin-left: auto;
+    }
+    &--dark {
+        background-color: #312A36;
+    }
+}

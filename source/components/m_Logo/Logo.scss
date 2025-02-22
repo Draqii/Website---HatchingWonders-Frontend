@@ -1,0 +1,30 @@
+.hw_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    &__icon {
+        width: 50px;
+        @media only screen and (min-width: 740px) { width: 55px; }
+        @media only screen and (min-width: 1440px) { width: 60px; }
+    }
+    &__text {
+        font-family: "ADLaMDisplay";
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 20px;
+        @media only screen and (min-width: 740px) { font-size: 22px; line-height: 22px;}
+        @media only screen and (min-width: 1440px) { font-size: 24px; line-height: 24px;}
+        display: flex;
+        flex-direction: column;
+    }
+    &--light &__primary {
+        color: #454242;
+    }
+    &--dark &__primary {
+        color: #FFFFFF;
+    }
+    &__secondary {
+        color: #F27E09;
+    }
+}

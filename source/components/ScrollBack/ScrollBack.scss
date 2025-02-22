@@ -1,0 +1,32 @@
+.hw_scrollback {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    &__icon {
+        width: 30px;
+        @media only screen and (min-width: 740px) { width: 35px; }
+        @media only screen and (min-width: 1440px) { width: 40px; }
+    }
+    &__text {
+        font-family: "ADLaMDisplay";
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 17px;
+        @media only screen and (min-width: 740px) { font-size: 19px; line-height: 19px;}
+        @media only screen and (min-width: 1440px) { font-size: 21px; line-height: 21px;}
+    }
+    &__textcontainer {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    transition: transform .15s;
+    &:hover {
+        transform: scale(1.06);
+    }
+    &:active {
+        transform: scale(0.92);
+    }
+}

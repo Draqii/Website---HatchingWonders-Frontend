@@ -1,0 +1,21 @@
+.hw_languageswitch {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    &__language {
+        cursor: pointer;
+        &:hover { transform: scale(1.1);}
+        &:active { transform: scale(0.95);}
+        transition: transform 0.2s;
+        width: 50px;
+        height: 30px;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
+        filter: saturate(0%);
+        &--active {
+            cursor: default;
+            filter: saturate(100%);
+            &:hover { transform: scale(1.0);}
+            &:active { transform: scale(1.0);}
+        }
+    }
+}

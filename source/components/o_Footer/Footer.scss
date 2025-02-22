@@ -1,0 +1,13 @@
+.hw_footer {
+    position: relative;
+    box-shadow: 0px -2px 3px 1px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+    background: linear-gradient(0deg, #faac63 0%, #FF7801 100%);
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__language {
+        margin-left: auto;
+    }
+}
