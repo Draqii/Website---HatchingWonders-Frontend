@@ -1,7 +1,4 @@
-export interface ImageProps  {
-    src: any
-    alt?: string
-    onClick?: any
+export interface ParagraphProps  {
     language?: "english" | "german"
     theme?: "light" | "dark"
     className?: string

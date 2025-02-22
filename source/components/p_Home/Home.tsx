@@ -3,7 +3,7 @@ import {setClass} from "../../modules/setClass";
 import {HomeProps} from "./Home.types";
 import "./Home.scss";
 
-const Home = ({theme, className}: HomeProps) => {
+const Home = ({language, theme, className}: HomeProps) => {
 
     return (
         <div className={setClass("home", [theme], className)}>

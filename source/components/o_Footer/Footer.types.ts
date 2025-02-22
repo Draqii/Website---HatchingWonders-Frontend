@@ -1,6 +1,6 @@
 export interface FooterProps  {
-    language: any
     onLanguageChange: any
+    language?: "english" | "german"
     theme?: "light" | "dark"
     className?: string
 }

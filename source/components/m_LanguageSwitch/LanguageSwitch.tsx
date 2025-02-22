@@ -21,7 +21,7 @@ const LanguageSwitch = ({onChange, language, theme, className}: LanguageSwitchPr
 
     return (
         <div className={setClass("hw_languageswitch", [theme], className)}>
-            {languages.map((mappedLanguage, language_id) => <Image key={language_id} className={setClass("hw_languageswitch__language", [language === mappedLanguage.language ? "active" : ""])} onClick={() => updateLanguage(mappedLanguage.language)} src={mappedLanguage.flag} /> )}
+            {languages.map((mappedLanguage, language_id) => <Image language={language} key={language_id} className={setClass("hw_languageswitch__language", [language === mappedLanguage.language ? "active" : ""])} onClick={() => updateLanguage(mappedLanguage.language)} src={mappedLanguage.flag} /> )}
         </div>
     )
 }

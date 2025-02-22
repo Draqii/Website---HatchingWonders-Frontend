@@ -4,9 +4,10 @@ import { ScrollBackProps } from "./ScrollBack.types";
 import Text from "../a_Text/Text";
 import SVG_Scrollback from "../../../public/svgs/scrollback.svg"
 import Icon from "../a_Icon/Icon";
+import texts from "./ScrollBack.json"
 import "./ScrollBack.scss";
 
-const ScrollBack = ({theme, className}: ScrollBackProps) => {
+const ScrollBack = ({language, theme, className}: ScrollBackProps) => {
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -26,11 +27,11 @@ const ScrollBack = ({theme, className}: ScrollBackProps) => {
             <Text 
                 className="hw_scrollback__text" 
                 theme={theme === "light" ? "dark" : "light"}
-                >Scroll</Text>
+                >{texts[language]["text1"]}</Text>
             <Text 
                 className="hw_scrollback__text" 
                 theme={theme === "light" ? "dark" : "light"}
-                >Back</Text>
+                >{texts[language]["text2"]}</Text>
             </div>
         </div>
     )

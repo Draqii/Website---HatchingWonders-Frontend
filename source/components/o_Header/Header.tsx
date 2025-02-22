@@ -5,11 +5,11 @@ import Logo from "../m_Logo/Logo";
 import NightSwitch from "../m_NightSwitch/NightSwitch";
 import "./Header.scss";
 
-const Header = ({onNightSwitchChange, theme, className}: HeaderProps) => {
+const Header = ({language, onNightSwitchChange, theme, className}: HeaderProps) => {
 
     return (
         <header className={setClass("hw_header", [theme], className)}>
-            <Logo className="hw_header__logo" theme={theme} />
+            <Logo language={language} className="hw_header__logo" theme={theme} />
             <NightSwitch className="hw_header__niteswitch" onChange={onNightSwitchChange} />
         </header>
     )

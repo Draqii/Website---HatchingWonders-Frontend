@@ -1,4 +1,21 @@
 .hw_heading {
+    font-family: "DynaPuff";
+
+    &--teaser {
+        text-align: center;
+        font-size: 46px;
+        line-height: 46px;
+        @media only screen and (min-width: 740px) { 
+            font-size: 58px;
+            line-height: 58px;
+        }
+        @media only screen and (min-width: 1440px) { 
+            font-size: 65px;
+            line-height: 65px;
+        }
+    }
+
+
     &--light {
         color: #454242;
     }
