@@ -1,3 +1,41 @@
 .hw_button {
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    font-family: "DynaPuff";
+    outline: none;
+    appearance: none;
+    text-align: center;
+    border: 0px solid rgba(0, 0, 0, 0);
+    font-size: 18px;
+    line-height: 25px;
+    @media only screen and (min-width: 740px) { 
+        font-size: 20.5px;
+        line-height: 28px;
+    }
+    @media only screen and (min-width: 1440px) { 
+        font-size: 22px;
+        line-height: 32px;
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.975);
+    }
+    transition: transform .2s;
+    cursor: pointer;
+    &--light {
 
+    }
+    &--dark {
+
+    }
+    &--light.hw_button--primary {
+        background-color: orange;
+        color: white;
+    }
+    &--dark &--primary {
+
+    }
 }

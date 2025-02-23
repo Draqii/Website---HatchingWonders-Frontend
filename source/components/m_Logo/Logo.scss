@@ -8,7 +8,7 @@
         @media only screen and (min-width: 740px) { width: 55px; }
         @media only screen and (min-width: 1440px) { width: 60px; }
     }
-    &__text {
+    &__primary, &__secondary {
         font-family: "ADLaMDisplay";
         font-weight: 900;
         font-size: 18px;

@@ -3,10 +3,10 @@ import { setClass } from "../../modules/setClass";
 import { TextProps } from "./Text.types";
 import "./Text.scss";
 
-const Text = ({children, theme, className}: TextProps) => {
+const Text = ({size, children, theme, className}: TextProps) => {
 
     return (
-        <span className={setClass("hw_text", [theme], className)}>
+        <span className={setClass("hw_text", [theme, size], className)}>
             {children}
         </span>
     )

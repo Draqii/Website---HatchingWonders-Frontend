@@ -13,8 +13,8 @@ const Logo = ({language, theme, className}: LogoProps) => {
         <div className={setClass("hw_logo", [theme], className)}>
             <Icon className="hw_logo__icon" ReactSVG={SVG_Logo} />
             <div className="hw_logo__text">
-                <Text theme={theme} className="hw_logo__primary">{texts[language]["text1"]}</Text>
-                <Text theme={theme} className="hw_logo__secondary">{texts[language]["text2"]}</Text>
+                <Text size="medium" theme={theme} className="hw_logo__primary">{texts[language]["text1"]}</Text>
+                <Text size="medium" theme={theme} className="hw_logo__secondary">{texts[language]["text2"]}</Text>
             </div>
         </div>
     )

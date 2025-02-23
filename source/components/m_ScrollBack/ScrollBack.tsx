@@ -25,10 +25,12 @@ const ScrollBack = ({language, theme, className}: ScrollBackProps) => {
                 ReactSVG={SVG_Scrollback} />
             <div className="hw_scrollback__textcontainer">
             <Text 
+                size="medium"
                 className="hw_scrollback__text" 
                 theme={theme === "light" ? "dark" : "light"}
                 >{texts[language]["text1"]}</Text>
             <Text 
+                size="medium"
                 className="hw_scrollback__text" 
                 theme={theme === "light" ? "dark" : "light"}
                 >{texts[language]["text2"]}</Text>

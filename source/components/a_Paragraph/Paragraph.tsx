@@ -3,10 +3,10 @@ import { setClass } from "../../modules/setClass";
 import { ParagraphProps } from "./Paragraph.types";
 import "./Paragraph.scss";
 
-const Paragraph = ({children, theme, className}: ParagraphProps) => {
+const Paragraph = ({size, children, theme, className}: ParagraphProps) => {
 
     return (
-        <p className={setClass("hw_paragraph", [theme], className)}>
+        <p className={setClass("hw_paragraph", [theme, size], className)}>
             {children}
         </p>
     )

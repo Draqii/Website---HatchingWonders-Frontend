@@ -1,14 +1,15 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { CopyrightProps } from "./Copyright.types";
+import Text from "../a_Text/Text";
 import texts from "./Copyright.json"
 import "./Copyright.scss";
 
 const Copyright = ({language, theme, className}: CopyrightProps) => {
 
     return (
-        <div className={setClass("copyright", [theme], className)}>
-            copyright
+        <div className={setClass("hw_copyright", [theme], className)}>
+            <Text theme={theme==="light"?"dark":"light"} size={"small"}>© 2023-2025 Hatching Wonders</Text>
         </div>
     )
 }

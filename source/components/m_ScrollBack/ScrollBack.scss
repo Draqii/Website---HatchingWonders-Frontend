@@ -9,14 +9,7 @@
         @media only screen and (min-width: 740px) { width: 35px; }
         @media only screen and (min-width: 1440px) { width: 40px; }
     }
-    &__text {
-        font-family: "ADLaMDisplay";
-        font-weight: 900;
-        font-size: 16.5px;
-        line-height: 16.5px;
-        @media only screen and (min-width: 740px) { font-size: 18px; line-height: 18px;}
-        @media only screen and (min-width: 1440px) { font-size: 19px; line-height: 19px;}
-    }
+    font-family: "ADLaMDisplay";
     &__textcontainer {
         align-items: center;
         display: flex;
