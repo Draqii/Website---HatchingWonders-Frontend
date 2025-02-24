@@ -1,3 +1,16 @@
 .hw_link {
-
+    text-decoration: none;
+    &--light {
+        border-bottom: 2px solid #454242;
+    }
+    &--dark {
+        border-bottom: 2px solid white;
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+    transition: .17s;
 }

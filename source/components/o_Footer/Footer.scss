@@ -4,12 +4,20 @@
     margin-top: auto;
     background: linear-gradient(0deg, #faac63 0%, #FF7801 100%);
     padding: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
     &__row {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    &__language {
+    &__language, &__links {
         margin-left: auto;
     }
     &__copyright {
