@@ -1,20 +1,20 @@
-$light_primary: rgb(250, 250, 250);
-$dark_primary: rgb(56, 56, 56);
+$light_primary: white;
+$dark_primary: #454242;
 
-.hw_svg {
+.hw_icon {
     &--light {
-        .ihw_svg__fill {
+        .hw_svg__fill {
             fill: $dark_primary;
         }
-        .ihw_svg__stroke {
+        .hw_svg__stroke {
             stroke: $dark_primary;
         }
     }
     &--dark {
-        .ihw_svg__fill {
+        .hw_svg__fill {
             fill: $light_primary;
         }
-        .ihw_svg__stroke {
+        .hw_svg__stroke {
             stroke: $light_primary;
         }
     }

@@ -2,6 +2,7 @@ import React from "react";
 import { setClass } from "../../modules/setClass";
 import { NotFoundProps } from "./NotFound.types";
 import { useNavigate } from "react-router-dom";
+import texts from "./NotFound.json"
 import Heading from "../a_Heading/Heading";
 import Paragraph from "../a_Paragraph/Paragraph";
 import Button from "../a_Button/Button";
@@ -26,7 +27,7 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
             <Heading
                 theme={theme}
                 size={"teaser"}
-            >Awh Bummers!</Heading>
+            >{texts[language]["title"]}</Heading>
 
 
             <Image 
@@ -38,11 +39,11 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
                 <Heading
                     theme={theme}
                     size={"xxlarge"}
-                >Resource not found!</Heading>
+                >{texts[language]["section1_heading"]}</Heading>
                 <Paragraph
                     theme={theme}
                     size={"large"}
-                >We are sorry! We tried searching for the page or resource you requested but we can’t find it anywhere!</Paragraph>
+                >{texts[language]["section1_text"]}</Paragraph>
             </section>  
 
 
@@ -51,15 +52,15 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
                     <Heading
                         theme={theme}
                         size={"xlarge"}
-                    >Go To Our Home Page</Heading>
+                    >{texts[language]["section2_heading"]}</Heading>
                     <Paragraph
                         theme={theme}
                         size={"medium"}
-                    >To get back to our home page, click the following button. We’ll make sure to not get lost again.</Paragraph>
+                    >{texts[language]["section2_text"]}</Paragraph>
                     <Button
                         theme={theme}
                         isPrimary={true}
-                        children={"To Welcome Page"}
+                        children={texts[language]["section2_button"]}
                         onClick={navigateToWelcomePage} />
                 </section>
 
@@ -68,15 +69,15 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
                     <Heading
                         theme={theme}
                         size={"xlarge"}
-                    >Go Back To Last Page</Heading>
+                    >{texts[language]["section3_heading"]}</Heading>
                     <Paragraph
                         theme={theme}
                         size={"medium"}
-                    >To get back to the last page you visited, click the following button. You might get redirected.</Paragraph>
+                    >{texts[language]["section3_text"]}</Paragraph>
                     <Button
                         theme={theme}
                         isPrimary={false}
-                        children={"To Last Page Visited"}
+                        children={texts[language]["section3_button"]}
                         onClick={navigateToLandingPage} />
                 </section>
             </section>

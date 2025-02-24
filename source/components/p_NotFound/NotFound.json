@@ -1,10 +1,24 @@
 {
     "english": {
-        "text1": "Scroll",
-        "text2": "Back"
+        "title": "Awh Bummers!",
+        "section1_heading": "Resource not found!",
+        "section1_text": "We are sorry! We tried searching for the page or resource you requested but we can’t find it anywhere!",
+        "section2_heading": "Go To Our Home Page",
+        "section2_text": "To get back to our home page, click the following button. We’ll make sure to not get lost again.",
+        "section2_button": "To Welcome Page",
+        "section3_heading": "Go Back To Last Page",
+        "section3_text": "To get back to the last page you visited, click the following button. You might get redirected.",
+        "section3_button": "To Last Page Visited"
     },
     "german": {
-        "text1": "Nach",
-        "text2": "Oben"
+        "title": "",
+        "section1_heading": "",
+        "section1_text": "",
+        "section2_heading": "",
+        "section2_text": "",
+        "section2_button": "",
+        "section3_heading": "",
+        "section3_text": "",
+        "section3_button": ""
     }
 }
