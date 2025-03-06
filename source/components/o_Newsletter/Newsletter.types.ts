@@ -1,6 +1,4 @@
-export interface CookieBannerProps  {
-    source?
-    onConsentChange: any
+export interface NewsletterProps  {
     language?: "english" | "german"
     theme?: "light" | "dark"
     className?: string

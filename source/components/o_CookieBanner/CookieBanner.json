@@ -1,6 +1,16 @@
 {
     "english": {
-        "title": "We Have Cookies!"
+        "title": "We Have Cookies!",
+        "table_title": "All Our Cookies",
+        "table1_heading1": "Cookie Name",
+        "table1_heading2": "Cookie Description",
+        "table1_row1_column2": "Cookie to determin wether to show the light or dark user interface.",
+        "table1_row2_column2": "Cookie to determin in which language text should be displayed.",
+        "table1_row3_column2": "Cookie to determin wether cookies got accepted.",
+        "button1": "Accept All Cookies",
+        "button2": "Deny Third Party Cookies",
+        "button3a": "Make Decision Later",
+        "button3b": "Keep Latest Decision"
     },
     "german": {
         "title": "Wir Haben Kekse!"

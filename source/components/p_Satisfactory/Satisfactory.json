@@ -1,0 +1,32 @@
+{
+    "math": {
+        "resources": [
+            {
+                "name": "Iron Miner",
+                "amount": 60
+            },
+            {
+                "name": "Iron Ore",
+                "base_amount": 30
+            },
+            {
+                "name": "Iron Ingot",
+                "base_amount": 30,
+                "requires": [
+                    {
+                        "name": "Iron Ore",
+                        "base_amount": 30
+                    }
+                ]
+            }
+        ]
+    },
+    "conveyor_belts": {
+        "mark_1": {
+            "speed": 60
+        },
+        "mark_2": {
+            "speed": 120
+        }
+    }
+}

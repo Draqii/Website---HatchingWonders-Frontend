@@ -1,10 +1,4 @@
 .hw_notfound {
-    padding: 0 20px;
-    width: calc(100% - 40px);
-    @media only screen and (min-width: 740px) { padding: 0 40px; width: calc(100% - 80px);}
-    @media only screen and (min-width: 1440px) { padding: 0 60px; width: calc(100% - 120px);} 
-    height: calc(100% - 60px);
-    z-index: 2;
     &__section {
         display: flex;
         flex-direction: column;

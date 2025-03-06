@@ -15,18 +15,23 @@ const App = ({}: any) => {
 
     return (
         <div className={setClass("hw_page", [theme])}>
-            {cookieConsent === "none" ? <CookieBanner 
+            {cookieConsent === "none" ? 
+            <CookieBanner 
                 onConsentChange={(consent) => setCookieConsent(consent)}
                 language={language} 
                 theme={theme} /> : null}
             <Header 
+                cookieConsent={cookieConsent}
                 onNightSwitchChange={(theme) => setTheme(theme)}
                 language={language} 
                 theme={theme} />
             <Router 
+                onConsentChange={(consent) => setCookieConsent(consent)}
+                cookieConsent={cookieConsent}
                 language={language} 
                 theme={theme} />
             <Footer 
+                cookieConsent={cookieConsent}
                 onLanguageChange={(new_language) => setLanguage(new_language)} 
                 language={language} 
                 theme={theme} />

@@ -20,7 +20,7 @@ const ScrollBack = ({language, theme, className}: ScrollBackProps) => {
     return (
         <div onClick={scrollToTop} className={setClass("hw_scrollback", [theme], className)}>
             <Icon 
-                theme={theme} 
+                theme={theme === "light" ? "dark" : "light"} 
                 className="hw_scrollback__icon" 
                 ReactSVG={SVG_Scrollback} />
             <div className="hw_scrollback__textcontainer">
