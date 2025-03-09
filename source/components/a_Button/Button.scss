@@ -1,5 +1,4 @@
 .hw_button {
-    border-radius: 4px;
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
     padding: 10px 20px;
     outline: none;
@@ -9,6 +8,7 @@
     font-family: "DynaPuff";
     font-size: 18px;
     line-height: 25px;
+    border-radius: 75px;
     @media only screen and (min-width: 740px) { 
         font-size: 20.5px;
         line-height: 28px;
@@ -26,16 +26,25 @@
     transition: transform .2s;
     cursor: pointer;
     &--light {
-
+        background-color: white;
+        color: #454242;
     }
     &--dark {
-
+        background-color: #454242;
+        color: white;
     }
     &--light.hw_button--primary {
         background-color: orange;
         color: white;
     }
     &--dark &--primary {
+
+    }
+
+    @media only screen and (min-width: 744px) {
+        
+    }
+    @media only screen and (min-width: 1440px) {
 
     }
 }

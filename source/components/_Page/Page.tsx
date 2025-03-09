@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useCookie from "../../modules/hooks/useCookie";
 import { setClass } from "../../modules/setClass";
 import Footer from "../o_Footer/Footer";
@@ -17,6 +17,7 @@ const App = ({}: any) => {
         <div className={setClass("hw_page", [theme])}>
             {cookieConsent === "none" ? 
             <CookieBanner 
+                source="app"
                 onConsentChange={(consent) => setCookieConsent(consent)}
                 language={language} 
                 theme={theme} /> : null}

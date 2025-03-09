@@ -1,18 +1,30 @@
 {
     "english": {
         "title": "We Have Cookies!",
+        "text": "We have a few cookies- Please take a moment to decide wether you wanna to keep em all or not.",
         "table_title": "All Our Cookies",
         "table1_heading1": "Cookie Name",
-        "table1_heading2": "Cookie Description",
-        "table1_row1_column2": "Cookie to determin wether to show the light or dark user interface.",
-        "table1_row2_column2": "Cookie to determin in which language text should be displayed.",
-        "table1_row3_column2": "Cookie to determin wether cookies got accepted.",
+        "table1_heading2": "Cookie Details",
+        "table1_row1_column2": "Determins wether to show the light or dark user interface.",
+        "table1_row2_column2": "Determins in which language text should be displayed.",
+        "table1_row3_column2": "Determins wether cookies already have been chosen.",
         "button1": "Accept All Cookies",
-        "button2": "Deny Third Party Cookies",
+        "button2": "Deny Optional Cookies",
         "button3a": "Make Decision Later",
         "button3b": "Keep Latest Decision"
     },
     "german": {
-        "title": "Wir Haben Kekse!"
+        "title": "We Have Cookies!",
+        "text": "We have a few cookies- Please take a moment to decide wether you wanna to keep em all or not.",
+        "table_title": "All Our Cookies",
+        "table1_heading1": "Cookie Name",
+        "table1_heading2": "Cookie Details",
+        "table1_row1_column2": "Determins wether to show the light or dark user interface.",
+        "table1_row2_column2": "Determins in which language text should be displayed.",
+        "table1_row3_column2": "Determins wether cookies already have been chosen.",
+        "button1": "Accept All Cookies",
+        "button2": "Deny Optional Cookies",
+        "button3a": "Make Decision Later",
+        "button3b": "Keep Latest Decision"
     }
 }

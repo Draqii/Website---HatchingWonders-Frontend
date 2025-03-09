@@ -5,17 +5,31 @@ import LanguageSwitch from "../m_LanguageSwitch/LanguageSwitch";
 import ScrollBack from "../m_ScrollBack/ScrollBack";
 import Copyright from "../m_Copyright/Copyright";
 import Link from "../a_Link/Link";
-import Mission from "../o_Mission/Mission";
-import Newsletter from "../o_Newsletter/Newsletter";
+import Mission from "../m_Mission/Mission";
+import Newsletter from "../m_Newsletter/Newsletter";
 import texts from "./Footer.json"
+import Socials from "../Socials/Socials";
 import "./Footer.scss";
 
 const Footer = ({language, onLanguageChange, theme, className}: FooterProps) => {
 
     return (
         <div className={setClass("hw_footer", [theme], className)}>
-            <Mission />
-            <Newsletter />
+            <Mission 
+                className="hw_footer_mission" 
+                language={language} 
+                theme={theme} 
+            />
+            <Newsletter 
+                className="hw_footer_newsletter" 
+                language={language} 
+                theme={theme}
+            />
+            <Socials 
+                className="hw_footer_socials" 
+                language={language} 
+                theme={theme}
+            />
             <div className="hw_footer__row">
                 <ScrollBack 
                     className="hw_footer_scrollback" 

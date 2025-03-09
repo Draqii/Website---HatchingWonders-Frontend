@@ -9,6 +9,9 @@ import Icon from "../a_Icon/Icon";
 import SVG_Close from "../../../public/svgs/close.svg"
 import Table from "../a_Table/Table";
 import Button from "../a_Button/Button";
+import Paragraph from "../a_Paragraph/Paragraph";
+import Image from "../a_Image/Image";
+import img_cookies from "../../../public/images/cookie.png"
 import "./CookieBanner.scss";
 
 const CookieBanner = ({ source, onConsentChange, language, theme, className}: CookieBannerProps) => {
@@ -18,7 +21,7 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
 
     const closeBanner = () => {
         if(source !== "page") setIsOpened(false)
-        else navigate(-1)
+        else navigate(-1);
     }
 
     const updateConsent = (choice) => {
@@ -36,18 +39,26 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
     return (
         isOpened === true ? <div className={setClass("hw_cookiebanner", [theme, source==="page"?"page":""], className)}>
             <Heading 
+                className="hw_cookiebanner__title"
                 theme={theme === "light" ? "dark" : "light"} 
                 children={texts[language]["title"]} 
                 size={"xxlarge"} />
+            <Paragraph
+                className="hw_cookiebanner__text"
+                theme={theme === "light" ? "dark" : "light"}
+                children={texts[language]["text"]}
+                size="medium"
+            />
             <Icon 
                 onClick={() => closeBanner()} 
-                theme={theme === "light" ? "dark" : "light"} 
+                theme={theme === "light" ? "light" : "dark"} 
                 className="hw_cookiebanner__close" 
                 ReactSVG={SVG_Close} />
 
             <div className="hw_cookiebanner__options">
                 <Heading 
                     theme={theme === "light" ? "dark" : "light"} 
+                    className="hw_cookiebanner__title"
                     children={texts[language]["table_title"]} 
                     size={"xxlarge"} />
                     <Table 
@@ -57,10 +68,29 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
                             rows: existing_cookies.map((cookie, cookieID) => ({columns: [cookie, texts[language]["table1_row"+(cookieID+1) +"_column2"]]})  )  })} />
             </div>
             <div className="hw_cookiebanner__controls">
-                <Button  className="hw_cookiebanner__button" isPrimary={false} children={texts[language]["button1"]} onClick={() => updateConsent("all")} />
-                <Button  className="hw_cookiebanner__button" isPrimary={false} children={texts[language]["button2"]} onClick={() => updateConsent("required")} />
-                <Button  className="hw_cookiebanner__button" isPrimary={false} children={source==="page" ? texts[language]["button3b"] : texts[language]["button3a"]} onClick={closeBanner} />
+                <Button 
+                    theme={theme}  
+                    className="hw_cookiebanner__button" 
+                    isPrimary={false} 
+                    children={texts[language]["button1"]} 
+                    onClick={() => updateConsent("all")} />
+                <Button 
+                    theme={theme}  
+                    className="hw_cookiebanner__button" 
+                    isPrimary={false} 
+                    children={texts[language]["button2"]} 
+                    onClick={() => updateConsent("required")} />
+                <Button 
+                    theme={theme}  
+                    className="hw_cookiebanner__button" 
+                    isPrimary={false} 
+                    children={source==="page" ? texts[language]["button3b"] : texts[language]["button3a"]} 
+                    onClick={closeBanner} />
             </div>
+            <Image 
+                className="hw_cookiebanner__bg" 
+                src={img_cookies} 
+                language={language} />
         </div> : null
     )
 }
