@@ -14,7 +14,7 @@ import Image from "../a_Image/Image";
 import img_cookies from "../../../public/images/cookie.png"
 import "./CookieBanner.scss";
 
-const CookieBanner = ({ source, onConsentChange, language, theme, className}: CookieBannerProps) => {
+const CookieBanner = ({ cookieConsent, id, source, onConsentChange, language, theme, className}: CookieBannerProps) => {
 
     const navigate = useNavigate()
     const [isOpened, setIsOpened] = useState(true)
@@ -30,6 +30,13 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
             closeBanner()
         }
 
+    const deleteCookies = () => {
+        setItem("hw_lightmode", "", -360)
+        setItem("hw_language", "", -360)
+        setItem("hw_consent", "", -360)
+        closeBanner()
+    }
+
     const existing_cookies = [
         "hw_lightmode",
         "hw_language",
@@ -37,7 +44,10 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
     ]
 
     return (
-        isOpened === true ? <div className={setClass("hw_cookiebanner", [theme, source==="page"?"page":""], className)}>
+        isOpened === true ? 
+        <span>
+        <div id={id} className="hw_cookiebanner__fg"/>
+        <div id={id} className={setClass("hw_cookiebanner", [theme, source==="page"?"page":""], className)}>
             <Heading 
                 className="hw_cookiebanner__title"
                 theme={theme === "light" ? "dark" : "light"} 
@@ -47,7 +57,7 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
                 className="hw_cookiebanner__text"
                 theme={theme === "light" ? "dark" : "light"}
                 children={texts[language]["text"]}
-                size="medium"
+                size="large"
             />
             <Icon 
                 onClick={() => closeBanner()} 
@@ -60,12 +70,16 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
                     theme={theme === "light" ? "dark" : "light"} 
                     className="hw_cookiebanner__title"
                     children={texts[language]["table_title"]} 
-                    size={"xxlarge"} />
+                    size={"xlarge"} />
                     <Table 
                         theme={theme === "light" ? "dark" : "light"}
                         data={({
-                            headings: [texts[language]["table1_heading1"], texts[language]["table1_heading2"]], 
-                            rows: existing_cookies.map((cookie, cookieID) => ({columns: [cookie, texts[language]["table1_row"+(cookieID+1) +"_column2"]]})  )  })} />
+                            headings: [texts[language]["table1_heading1"], texts[language]["table1_heading2"], , texts[language]["table1_heading3"]], 
+                            rows: existing_cookies.map((cookie, cookieID) => ({columns: [
+                                cookie, 
+                                texts[language]["table1_row"+(cookieID+1) +"_column2"],
+                                texts[language]["table1_row"+(cookieID+1) +"_column3"],
+                                ]})  )  })} />
             </div>
             <div className="hw_cookiebanner__controls">
                 <Button 
@@ -87,11 +101,26 @@ const CookieBanner = ({ source, onConsentChange, language, theme, className}: Co
                     children={source==="page" ? texts[language]["button3b"] : texts[language]["button3a"]} 
                     onClick={closeBanner} />
             </div>
+            {cookieConsent === "all" || cookieConsent === "required" ? <Paragraph
+                className="hw_cookiebanner__text"
+                theme={theme === "light" ? "dark" : "light"}
+                children={cookieConsent === "all" ? texts[language]["status1"] : texts[language]["status2"]}
+                size="medium"
+                onClick={() => deleteCookies()}
+            /> : null}
+            {cookieConsent === "all" || cookieConsent === "required" ? <Paragraph
+                className="hw_cookiebanner__delete"
+                theme={theme === "light" ? "dark" : "light"}
+                children={texts[language]["delete"]}
+                size="medium"
+                onClick={() => deleteCookies()}
+            /> 
+            : null}
             <Image 
                 className="hw_cookiebanner__bg" 
                 src={img_cookies} 
                 language={language} />
-        </div> : null
+        </div></span> : null
     )
 }
 

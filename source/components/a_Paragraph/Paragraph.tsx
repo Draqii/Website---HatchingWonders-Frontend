@@ -3,10 +3,14 @@ import { setClass } from "../../modules/setClass";
 import { ParagraphProps } from "./Paragraph.types";
 import "./Paragraph.scss";
 
-const Paragraph = ({size, children, theme, className}: ParagraphProps) => {
+const Paragraph = ({onClick, size, children, theme, className}: ParagraphProps) => {
+
+    const _onClick = () => {
+        if(onClick) onClick()
+    }
 
     return (
-        <p className={setClass("hw_paragraph", [theme, size], className)}>
+        <p onClick={_onClick} className={setClass("hw_paragraph", [theme, size], className)}>
             {children}
         </p>
     )

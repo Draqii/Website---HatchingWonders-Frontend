@@ -13,7 +13,7 @@ const Socials = ({language, theme, className}: SocialsProps) => {
                 className="hw_cookiebanner__title"
                 theme={theme === "light" ? "dark" : "light"} 
                 children={texts[language]["title"]} 
-                size={"xxlarge"} />
+                size={"xlarge"} />
         </div>
     )
 }

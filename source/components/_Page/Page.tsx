@@ -17,6 +17,7 @@ const App = ({}: any) => {
         <div className={setClass("hw_page", [theme])}>
             {cookieConsent === "none" ? 
             <CookieBanner 
+                id="hw_cookiebanner--outer"
                 source="app"
                 onConsentChange={(consent) => setCookieConsent(consent)}
                 language={language} 

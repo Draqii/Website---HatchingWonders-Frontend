@@ -23,6 +23,7 @@ const Router = ({ cookieConsent, onConsentChange, language, theme, className }: 
         {
             path: "/cookies", 
             component: <Cookies
+                cookieConsent={cookieConsent}
                 onConsentChange={onConsentChange}
                 className={setClass("hw_route", [theme], "")}
                 language={language}

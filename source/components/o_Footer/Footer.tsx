@@ -8,7 +8,7 @@ import Link from "../a_Link/Link";
 import Mission from "../m_Mission/Mission";
 import Newsletter from "../m_Newsletter/Newsletter";
 import texts from "./Footer.json"
-import Socials from "../Socials/Socials";
+import Socials from "../m_Socials/Socials";
 import "./Footer.scss";
 
 const Footer = ({language, onLanguageChange, theme, className}: FooterProps) => {

@@ -34,11 +34,11 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        transition: transform .15s;
         cursor: pointer;
         box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
         border-radius: 30px;
         padding: 10px;
+        transition: transform .15s;
         &:hover {
             transform: scale(1.1);
         }
@@ -73,14 +73,30 @@
         width: 100%;
     }
 
-    &__close, &__title, &__text, &__controls, &__options {
-        z-index: 3;
+    &__close, &__title, &__text, &__controls, &__options, &__delete {
+        z-index: 4;
     }
     &__bg {
         position: absolute;
         bottom: 0px;
         right: 0px;
-        z-index: 2;
+        z-index: 3;
+        border-radius: 40px;
+
+    }
+    &__delete {
+        font-weight: 600;
+        text-decoration: underline;
+        text-align: left;
+        cursor: pointer;
+        transition: transform .15s;
+        width: fit-content;
+        &:hover {
+            transform: scaleY(1.1) scaleX(1.05);
+        }
+        &:active {
+            transform: scaleY(0.9) scaleX(0.95);
+        }
     }
     &__bg { width: 280px; }
     @media only screen and (min-width: 740px) { 
@@ -88,6 +104,18 @@
     }
     @media only screen and (min-width: 1440px) { 
         &__bg { width: 500px; }
+    }
+
+    &__fg {
+        display: block;
+        width: 100vW;
+        height: 100vH;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: 3;
+        background-color: rgb(138, 255, 230);
     }
 }
 

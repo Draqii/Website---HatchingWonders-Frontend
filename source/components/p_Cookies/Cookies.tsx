@@ -5,11 +5,12 @@ import texts from "./Cookies.json"
 import CookieBanner from "../o_CookieBanner/CookieBanner";
 import "./Cookies.scss";
 
-const Cookies = ({ onConsentChange, language, theme, className }: CookiesProps) => {
+const Cookies = ({ cookieConsent, onConsentChange, language, theme, className }: CookiesProps) => {
 
     return (
         <div className={setClass("hw_cookies", [theme], className)}>
             <CookieBanner
+                cookieConsent={cookieConsent}
                 source="page"
                 onConsentChange={(consent) => onConsentChange(consent)}
                 language={language}

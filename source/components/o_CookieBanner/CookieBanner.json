@@ -5,13 +5,20 @@
         "table_title": "All Our Cookies",
         "table1_heading1": "Cookie Name",
         "table1_heading2": "Cookie Details",
+        "table1_heading3": "Optional",
         "table1_row1_column2": "Determins wether to show the light or dark user interface.",
         "table1_row2_column2": "Determins in which language text should be displayed.",
         "table1_row3_column2": "Determins wether cookies already have been chosen.",
+        "table1_row1_column3": "No",
+        "table1_row2_column3": "No",
+        "table1_row3_column3": "No",
         "button1": "Accept All Cookies",
         "button2": "Deny Optional Cookies",
         "button3a": "Make Decision Later",
-        "button3b": "Keep Latest Decision"
+        "button3b": "Keep Latest Decision",
+        "delete": "Click Me To Delete All Cookies.",
+        "status1": "You Currently allow all cookies.",
+        "status2": "You Currently allow only required cookies."
     },
     "german": {
         "title": "We Have Cookies!",
@@ -25,6 +32,7 @@
         "button1": "Accept All Cookies",
         "button2": "Deny Optional Cookies",
         "button3a": "Make Decision Later",
-        "button3b": "Keep Latest Decision"
+        "button3b": "Keep Latest Decision",
+        "delete": ""
     }
 }
