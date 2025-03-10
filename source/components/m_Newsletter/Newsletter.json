@@ -1,8 +1,14 @@
 {
     "english": {
-        "title": "Join Our Newsletter!"
+        "title": "Join Our Newsletter!",
+        "textbox1_placeholder": "Your Email ...",
+        "textbox2_placeholder": "(optional) Your Name ...",
+        "button": "Sign Up To Our Mailing List"
     },
     "german": {
-        "title": ""
+        "title": "",
+        "textbox1_placeholder": "Deine Email ...",
+        "textbox2_placeholder": "(optional) Dein Name ...",
+        "button": "Zur Mailing Liste Anmelden"
     }
 }

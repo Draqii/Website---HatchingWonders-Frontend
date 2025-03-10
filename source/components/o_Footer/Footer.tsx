@@ -15,21 +15,23 @@ const Footer = ({language, onLanguageChange, theme, className}: FooterProps) => 
 
     return (
         <div className={setClass("hw_footer", [theme], className)}>
+            <div className="hw_footer__container">
             <Mission 
-                className="hw_footer_mission" 
+                className="hw_footer_mission hw_footer__item" 
                 language={language} 
                 theme={theme} 
             />
             <Newsletter 
-                className="hw_footer_newsletter" 
+                className="hw_footer_newsletter hw_footer__item" 
                 language={language} 
                 theme={theme}
             />
             <Socials 
-                className="hw_footer_socials" 
+                className="hw_footer_socials hw_footer__item" 
                 language={language} 
                 theme={theme}
             />
+            </div>        
             <div className="hw_footer__row">
                 <ScrollBack 
                     className="hw_footer_scrollback" 

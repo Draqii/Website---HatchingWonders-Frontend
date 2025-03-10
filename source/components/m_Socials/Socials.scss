@@ -1,4 +1,35 @@
 .hw_socials {
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title, &__text {
+        text-align: left;
+    }
+    &__container {
+        border-radius: 20px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+    &__instagram {
+        .hw_socials__text {
+            color: #C6309B;
+        }
+        background-color: #FFBB29;
+    }
+    &__facebook {
+        .hw_socials__text {
+            color: #3764B9;
+        }
+        background-color: #A3A4E0;
+    }
+    &__discord {
+        .hw_socials__text {
+            color: #5865F2;
+        }
+        background-color: #46CAAB;
+    }
 }
 

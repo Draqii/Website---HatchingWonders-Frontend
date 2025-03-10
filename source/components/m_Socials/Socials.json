@@ -1,8 +1,16 @@
 {
     "english": {
-        "title": "Follow Our Socials!"
+        "title": "Follow Our Socials!",
+        "text1": "Lorem Ipsum",
+        "text2": "Let’s Connect On Discord",
+        "text3": "Let’s Connect On Instagram",
+        "text4": "Let’s Connect On Facebook"
     },
     "german": {
-        "title": ""
+        "title": "",
+        "text1": "",
+        "text2": "",
+        "text3": "",
+        "text4": ""
     }
 }
