@@ -1,39 +1,50 @@
 import { request } from "./request"
 
-const formSentCallback = (response, callback) => {
-    if (response.status === 200) return callback(true)
-    callback(false)
+export const changeForm = (form, key, value, callback) => {
+    const copy = JSON.parse(JSON.stringify(form))
+    copy[key] = value
+    callback(copy)
 }
 
-const sendForm = (url, payload, callback) => {
-    request(
-        url, 
-        "POST", 
-        {payload: payload}, 
-        (response) => formSentCallback(response, (success) => callback(success))
-    )
+export const submitForm = (form, setForm, errorTexts) => {
+    const errors = errorChecks(form, setForm, errorTexts)
+    if(errors.length === 0) request("/newsletter/subscribe", "post", ({payload: {
+        email: form.email,
+        name: form.name === "" ? "Loki and Clover" : form.name
+    }}), (response) => {
+        console.log(response.status)
+    })
 }
 
-const containsNoEmptyData = (formData, formErrorsUpdate) => {
-    let valueFillInfo = Object.values(formData).map((item) => item !== "")
-    formErrorsUpdate(
-        valueFillInfo.map((value, id) => value === false 
-            ? "Field '" + Object.keys(formData)[id] + "' must be filled." 
-            : ""
-        )
-    )
-    return valueFillInfo.includes(false) === false
+const errorChecks = (form, setForm, errorTexts) => {
+    const copy = JSON.parse(JSON.stringify(form))
+    let errors = JSON.parse(JSON.stringify(form.errors))
+
+    const errorConsent = () => {
+        if (copy.check === false) errors = addToArray(errors, errorTexts["consent"])
+        else errors = removeFromArray(errors, errorTexts["consent"])
+    }
+
+    const errorEmptyEmail = () => {
+        if (copy.email === "") errors = addToArray(errors, errorTexts["empty_email"])
+            else errors = removeFromArray(errors, errorTexts["empty_email"])
+    }
+
+    errorConsent()
+    errorEmptyEmail()
+    copy["errors"] = errors
+    setForm(copy)
+    return errors
 }
 
-export const changeForm = (key, value, payload, callback) => {
-    let deepclone = JSON.parse(JSON.stringify(payload))
-    deepclone[key] = value
-    callback(deepclone)
+const addToArray = (arr, value) => {
+    const copyArr = JSON.parse(JSON.stringify(arr))
+    if(copyArr.indexOf(value) < 0) copyArr.push(value)
+    return copyArr
 }
 
-export const submitForm = (event, url, payload, callback, formErrorsUpdate) => {
-    event.preventDefault()
-    if (containsNoEmptyData(payload, formErrorsUpdate)) 
-        sendForm(url, payload, callback)
+const removeFromArray = (arr, value) => {
+    let copyArr = JSON.parse(JSON.stringify(arr))
+    if(copyArr.indexOf(value) > -1) copyArr.splice(copyArr.indexOf(value), 1)
+    return copyArr
 }
-

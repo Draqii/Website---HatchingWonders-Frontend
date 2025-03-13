@@ -1,14 +1,22 @@
 {
     "english": {
         "title": "Join Our Newsletter!",
+        "text": "Lorem Ipsum",
         "textbox1_placeholder": "Your Email ...",
         "textbox2_placeholder": "(optional) Your Name ...",
-        "button": "Sign Up To Our Mailing List"
+        "button": "Sign Up To Our Mailing List",
+        "checkbox": "I agree to Hatching Wonders saving my email adress to deliver their Newsletters aslong as im opted in.",
+        "error_consent": "You must confirm your consent to sign up to the newsletter by checking the checkbox first.",
+        "error_empty_email": "You must ensure that your email is filled out to sign up to the newsletter."
     },
     "german": {
         "title": "",
+        "text": "",
         "textbox1_placeholder": "Deine Email ...",
         "textbox2_placeholder": "(optional) Dein Name ...",
-        "button": "Zur Mailing Liste Anmelden"
+        "button": "Zur Mailing Liste Anmelden",
+        "checkbox": "",
+        "error_consent": "",
+        "error_empty_email": ""
     }
 }

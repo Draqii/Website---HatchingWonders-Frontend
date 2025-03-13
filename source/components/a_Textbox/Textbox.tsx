@@ -13,17 +13,17 @@ const Textbox = ({value, onChange, placeholder, language, theme, className}: Tex
     }
 
     return (
-        <div className={setClass("hw_textbox__container", [theme], className)}>
+        <div className={setClass("hw_textbox", [theme], className)}>
+            <Icon
+                className="hw_textbox__icon"
+                theme={theme === "light" ? "dark" : "light"} 
+                ReactSVG={SVG_Edit} />
             <input 
                 className="hw_textbox__input" 
                 onChange={_onChange}
                 value={value}
                 placeholder={placeholder}
                 type="text" />
-            <Icon
-                className="hw_textbox__icon"
-                theme={theme} 
-                ReactSVG={SVG_Edit} />
         </div>
     )
 }

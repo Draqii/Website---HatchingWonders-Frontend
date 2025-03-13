@@ -1,4 +1,9 @@
 .hw_mission {
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title, &__text {
+        text-align: left;
+    }
 }
 

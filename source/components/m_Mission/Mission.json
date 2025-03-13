@@ -1,8 +1,10 @@
 {
     "english": {
-        "title": "Our Mission!"
+        "title": "Our Mission!",
+        "text": "Lorem Ipsum!"
     },
     "german": {
-        "title": ""
+        "title": "",
+        "text": ""
     }
 }

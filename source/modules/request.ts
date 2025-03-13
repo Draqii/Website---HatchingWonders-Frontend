@@ -1,8 +1,8 @@
 export const backend_root = (
-    process.env.NODE_ENV === "production" ? "https://homepage-backend.onrender.com" : process.env.NODE_ENV === "development"? "http://localhost:3001" :""
+    process.env.NODE_ENV === "production" ? "https://homepage-backend.onrender.com" : process.env.NODE_ENV === "development"? "http://localhost:3000" :""
 ) 
 
-const options: any = (method, data) => ({
+const options: any = (method, payload) => ({
     method: method,
     mode: 'cors', 
     cache: 'no-cache', 
@@ -10,7 +10,7 @@ const options: any = (method, data) => ({
     headers: { 'Content-Type': 'application/json' },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer',
-    body: JSON.stringify(data) });
+    body: JSON.stringify(payload) });
 
 export const request = (path, method, data=null, callback) => {
     let _options = options(method, data)
