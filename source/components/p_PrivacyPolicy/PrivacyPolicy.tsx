@@ -1,10 +1,8 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { PrivacyPolicyProps } from "./PrivacyPolicy.types";
+import { List, Heading, Paragraph } from "da-awesome-library/build"
 import texts from "./PrivacyPolicy.json"
-import Heading from "../a_Heading/Heading";
-import Paragraph from "../a_Paragraph/Paragraph";
-import List from "../a_List/List";
 import "./PrivacyPolicy.scss";
 
 const PrivacyPolicy = ({ language, theme, className }: PrivacyPolicyProps) => {
@@ -55,7 +53,10 @@ const PrivacyPolicy = ({ language, theme, className }: PrivacyPolicyProps) => {
             <section className="hw_section">
                 <Heading className="hw_privacypolicy__heading" theme={theme} size={"xlarge"}>{texts[language]["section5_heading"]}</Heading>
                 <Paragraph className="hw_privacypolicy__text" theme={theme} size={"medium"}>{texts[language]["section5_text"]}</Paragraph>
-                <List theme={theme} items={[
+                <List 
+                    isOrdered={false}
+                    theme={theme} 
+                    items={[
                     texts[language]["list2_item1"],
                     texts[language]["list2_item2"],
                     texts[language]["list2_item3"],

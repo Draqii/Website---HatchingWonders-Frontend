@@ -1,6 +1,6 @@
 import React from "react";
-import {setClass} from "../../modules/setClass";
-import {HeaderProps} from "./Header.types";
+import { setClass } from "../../modules/setClass";
+import { HeaderProps } from "./Header.types";
 import Logo from "../m_Logo/Logo";
 import NightSwitch from "../m_NightSwitch/NightSwitch";
 import "./Header.scss";

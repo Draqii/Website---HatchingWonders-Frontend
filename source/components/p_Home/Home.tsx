@@ -1,7 +1,7 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { HomeProps } from "./Home.types";
-import Heading from "../a_Heading/Heading";
+import Heading from "../../../../../libraries/component_library/source/components/a_Heading/Heading";
 import texts from "./Home.json"
 import "./Home.scss";
 

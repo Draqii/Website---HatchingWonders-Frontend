@@ -1,9 +1,8 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { MissionProps } from "./Mission.types";
+import { Heading, Paragraph } from "da-awesome-library/build"
 import texts from "./Mission.json"
-import Heading from "../a_Heading/Heading";
-import Paragraph from "../a_Paragraph/Paragraph";
 import "./Mission.scss";
 
 const Mission = ({language, theme, className}: MissionProps) => {

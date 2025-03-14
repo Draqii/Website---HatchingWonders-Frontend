@@ -1,7 +1,7 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { CopyrightProps } from "./Copyright.types";
-import Text from "../a_Text/Text";
+import { Text } from "da-awesome-library/build"
 import texts from "./Copyright.json"
 import "./Copyright.scss";
 

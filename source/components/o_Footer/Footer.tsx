@@ -1,10 +1,10 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { FooterProps } from "./Footer.types";
+import { Link } from "da-awesome-library/build";
 import LanguageSwitch from "../m_LanguageSwitch/LanguageSwitch";
 import ScrollBack from "../m_ScrollBack/ScrollBack";
 import Copyright from "../m_Copyright/Copyright";
-import Link from "../a_Link/Link";
 import Mission from "../m_Mission/Mission";
 import Newsletter from "../m_Newsletter/Newsletter";
 import texts from "./Footer.json"

@@ -1,10 +1,8 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { SocialsProps } from "./Socials.types";
+import { Heading, Paragraph, Image } from "da-awesome-library/build"
 import texts from "./Socials.json"
-import Heading from "../a_Heading/Heading";
-import Image from "../a_Image/Image";
-import Paragraph from "../a_Paragraph/Paragraph";
 import social_facebook from "../../../public/images/social_facebook.png"
 import social_instagram from "../../../public/images/social_instagram.png"
 import social_discord from "../../../public/images/social_discord.png"
@@ -27,9 +25,10 @@ const Socials = ({ language, theme, className }: SocialsProps) => {
             <a href="https://discord.gg/p4beF6FfHn">
                 <div className="hw_socials__discord hw_socials__container">
                     <Image
+                        alt=""
                         className="hw_socials__icon"
                         src={social_discord}
-                        language={language} />
+                        theme="dark" />
                     <Paragraph
                         className="hw_socials__text"
                         size={"medium"}
@@ -40,9 +39,10 @@ const Socials = ({ language, theme, className }: SocialsProps) => {
             <a href="https://instagram.com/hatchingwonders">
                 <div className="hw_socials__instagram hw_socials__container">
                     <Image
+                        alt=""
                         className="hw_socials__icon"
                         src={social_instagram}
-                        language={language} />
+                        theme="dark" />
                     <Paragraph
                         className="hw_socials__text"
                         size={"medium"}
@@ -53,9 +53,10 @@ const Socials = ({ language, theme, className }: SocialsProps) => {
             <a href="https://www.facebook.com/profile.php?id=61551784313550&name=HatchingWonders">
                 <div className="hw_socials__facebook hw_socials__container">
                     <Image
+                        alt=""
                         className="hw_socials__icon"
                         src={social_facebook}
-                        language={language} />
+                        theme="dark" />
                     <Paragraph
                         className="hw_socials__text"
                         size={"medium"}

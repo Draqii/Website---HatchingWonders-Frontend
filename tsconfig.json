@@ -18,10 +18,12 @@
         "resolveJsonModule": true
     },
     "include": [
+        "source/custom.d.ts",
         "source/index.tsx",
         "source/**/*",
         "source/**/**/*"
-, "../../../modules/niteswitch/src/functions/nightmode.ts"    ],
+, "../../../modules/niteswitch/src/functions/nightmode.ts"
+],
     "exclude": [
         "node_modules",
         "build",

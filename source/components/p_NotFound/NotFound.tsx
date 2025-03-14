@@ -1,12 +1,9 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
+import { Button, Paragraph, Image, Heading } from "da-awesome-library/build"
 import { NotFoundProps } from "./NotFound.types";
 import { useNavigate } from "react-router-dom";
 import texts from "./NotFound.json"
-import Heading from "../a_Heading/Heading";
-import Paragraph from "../a_Paragraph/Paragraph";
-import Button from "../a_Button/Button";
-import Image from "../a_Image/Image";
 import img_bummers from "../../../public/images/bummers.png"
 import "./NotFound.scss";
 
@@ -31,9 +28,10 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
 
 
             <Image 
+                alt=""
                 className="hw_notfound__image"
                 src={img_bummers} 
-                language={language} />
+                theme="dark" />
 
             <section id="hw_notfound__section1" className="hw_notfound__section">
                 <Heading

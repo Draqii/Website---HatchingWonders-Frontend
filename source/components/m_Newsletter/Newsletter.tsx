@@ -2,12 +2,8 @@ import React, { useEffect, useState } from "react";
 import { setClass } from "../../modules/setClass";
 import { changeForm, submitForm } from "../../modules/form";
 import { NewsletterProps } from "./Newsletter.types";
+import { Heading, Paragraph, Textbox, Checkbox, Button } from "da-awesome-library/build"
 import texts from "./Newsletter.json"
-import Heading from "../a_Heading/Heading";
-import Textbox from "../a_Textbox/Textbox";
-import Button from "../a_Button/Button";
-import Paragraph from "../a_Paragraph/Paragraph";
-import Checkbox from "../a_Checkbox/Checkbox";
 import "./Newsletter.scss";
 
 const Newsletter = ({language, theme, className}: NewsletterProps) => {
@@ -48,7 +44,7 @@ const Newsletter = ({language, theme, className}: NewsletterProps) => {
                 checked={form.check} 
                 theme={theme} 
                 onChange={(value) => changeForm(form, "check", value, setForm)} 
-                text={texts[language]["checkbox"]} />
+                children={texts[language]["checkbox"]} />
             {form.errors.length > 0 ? form.errors.map((error, error_id) => <Paragraph 
                 key={error_id}
                 className="hw_newsletter__text"

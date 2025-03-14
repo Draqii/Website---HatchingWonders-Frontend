@@ -3,14 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { setClass } from "../../modules/setClass";
 import { setItem } from "../../modules/hooks/useCookie";
 import { CookieBannerProps } from "./CookieBanner.types";
+import { Button, Heading, Icon, Table, Paragraph, Image } from "da-awesome-library/build"
 import texts from "./CookieBanner.json"
-import Heading from "../a_Heading/Heading";
-import Icon from "../a_Icon/Icon";
 import SVG_Close from "../../../public/svgs/close.svg"
-import Table from "../a_Table/Table";
-import Button from "../a_Button/Button";
-import Paragraph from "../a_Paragraph/Paragraph";
-import Image from "../a_Image/Image";
 import img_cookies from "../../../public/images/cookie.png"
 import "./CookieBanner.scss";
 
@@ -117,9 +112,10 @@ const CookieBanner = ({ cookieConsent, id, source, onConsentChange, language, th
             /> 
             : null}
             <Image 
+                alt=""
                 className="hw_cookiebanner__bg" 
                 src={img_cookies} 
-                language={language} />
+                theme="dark" />
         </div></span> : null
     )
 }

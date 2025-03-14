@@ -1,10 +1,8 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { TermsOfServiceProps } from "./TermsOfService.types";
+import { List, Heading, Paragraph } from "da-awesome-library/build"
 import texts from "./TermsOfService.json"
-import Heading from "../a_Heading/Heading";
-import Paragraph from "../a_Paragraph/Paragraph";
-import List from "../a_List/List";
 import "./TermsOfService.scss";
 
 const TermsOfService = ({language, theme, className}: TermsOfServiceProps) => {
@@ -18,7 +16,10 @@ const TermsOfService = ({language, theme, className}: TermsOfServiceProps) => {
             </section>
             <section className="hw_section">
                 <Heading className="hw_termsofservice__heading" theme={theme} size={"xlarge"}>{texts[language]["heading_xlarge"]}</Heading>
-                <List theme={theme} isOrdered items={[
+                <List 
+                    theme={theme} 
+                    isOrdered={true}
+                    items={[
                     texts[language]["list1_item1"],
                     texts[language]["list1_item2"],
                     texts[language]["list1_item3"],

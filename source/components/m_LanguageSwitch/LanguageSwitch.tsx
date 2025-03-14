@@ -2,7 +2,7 @@ import React from "react";
 import { setClass } from "../../modules/setClass";
 import { LanguageSwitchProps } from "./LanguageSwitch.types";
 import { setItem } from "../../modules/hooks/useCookie";
-import Image from "../a_Image/Image";
+import { Image } from "da-awesome-library/build";
 import img_flag_us from "../../../public/images/flag_us.png"
 import img_flag_ger from "../../../public/images/flag_ger.webp"
 import "./LanguageSwitch.scss";
@@ -21,7 +21,7 @@ const LanguageSwitch = ({onChange, language, theme, className}: LanguageSwitchPr
 
     return (
         <div className={setClass("hw_languageswitch", [theme], className)}>
-            {languages.map((mappedLanguage, language_id) => <Image language={language} key={language_id} className={setClass("hw_languageswitch__language", [language === mappedLanguage.language ? "active" : ""])} onClick={() => updateLanguage(mappedLanguage.language)} src={mappedLanguage.flag} /> )}
+            {languages.map((mappedLanguage, language_id) => <Image alt="" theme={"dark"} key={language_id} className={setClass("hw_languageswitch__language", [language === mappedLanguage.language ? "active" : ""])} onClick={() => updateLanguage(mappedLanguage.language)} src={mappedLanguage.flag} /> )}
         </div>
     )
 }

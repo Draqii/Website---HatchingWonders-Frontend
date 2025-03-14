@@ -1,9 +1,8 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { ScrollBackProps } from "./ScrollBack.types";
-import Text from "../a_Text/Text";
+import { Text, Icon } from "da-awesome-library/build"
 import SVG_Scrollback from "../../../public/svgs/scrollback.svg"
-import Icon from "../a_Icon/Icon";
 import texts from "./ScrollBack.json"
 import "./ScrollBack.scss";
 

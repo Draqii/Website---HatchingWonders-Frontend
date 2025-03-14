@@ -1,9 +1,9 @@
 import React from "react";
 import { setClass } from "../../modules/setClass";
 import { SatisfactoryProps } from "./Satisfactory.types";
+import { Button } from "da-awesome-library/build"
 import texts from "./Satisfactory.json"
 import "./Satisfactory.scss";
-import Button from "../a_Button/Button";
 
 const Satisfactory = ({language, theme, className}: SatisfactoryProps) => {
 
@@ -13,7 +13,11 @@ const Satisfactory = ({language, theme, className}: SatisfactoryProps) => {
     
     return (
         <div className={setClass("hw_satisfactory", [theme], className)}>
-            <Button isPrimary={false} children={"Calculate"} onClick={calculate} />
+            <Button 
+                theme={theme}
+                isPrimary={false} 
+                children={"Calculate"} 
+                onClick={calculate} />
         </div>
     )
 }
