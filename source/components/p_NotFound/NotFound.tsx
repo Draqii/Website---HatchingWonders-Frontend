@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { Button, Paragraph, Image, Heading } from "da-awesome-library/build"
 import { NotFoundProps } from "./NotFound.types";
@@ -8,6 +8,10 @@ import img_bummers from "../../../public/images/bummers.png"
 import "./NotFound.scss";
 
 const NotFound = ({ language, theme, className }: NotFoundProps) => {
+
+    useEffect(() => {
+        document.title = "Awh Bummers! - Hatching Wonders"
+    }, [])
 
     const navigate = useNavigate()
 

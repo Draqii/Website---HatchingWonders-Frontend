@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { PrivacyPolicyProps } from "./PrivacyPolicy.types";
 import { List, Heading, Paragraph } from "da-awesome-library/build"
@@ -6,6 +6,10 @@ import texts from "./PrivacyPolicy.json"
 import "./PrivacyPolicy.scss";
 
 const PrivacyPolicy = ({ language, theme, className }: PrivacyPolicyProps) => {
+
+    useEffect(() => {
+        document.title = "Privacy Policy - Hatching Wonders"
+    }, [])
 
     return (
         <div className={setClass("hw_privacypolicy", [theme], className)}>

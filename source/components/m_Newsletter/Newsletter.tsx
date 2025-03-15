@@ -40,6 +40,7 @@ const Newsletter = ({language, theme, className}: NewsletterProps) => {
                 onChange={(value) => changeForm(form, "name", value, setForm)} 
                 placeholder={texts[language]["textbox2_placeholder"]} />
             <Checkbox 
+                hasSecondaryTextColor={true}
                 className="hw_newsletter__checkbox"
                 checked={form.check} 
                 theme={theme} 

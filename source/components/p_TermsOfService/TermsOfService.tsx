@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { TermsOfServiceProps } from "./TermsOfService.types";
 import { List, Heading, Paragraph } from "da-awesome-library/build"
@@ -6,6 +6,10 @@ import texts from "./TermsOfService.json"
 import "./TermsOfService.scss";
 
 const TermsOfService = ({language, theme, className}: TermsOfServiceProps) => {
+
+    useEffect(() => {
+        document.title = "Terms Of Use - Hatching Wonders"
+    }, [])
 
     return (
         <div className={setClass("hw_termsofservice", [theme], className)}>
