@@ -47,4 +47,16 @@
             }
         }
     }
+
+    .hw_scrollback--dark .hw_icon--light {
+        .hw_svg__fill {
+            fill: #454242 !important;
+          }
+    }
+
+    .hw_scrollback--light .hw_icon {
+        .hw_svg__fill {
+            fill: rgb(255, 239, 215) !important;
+          }
+    }
 }

@@ -51,6 +51,18 @@
         background-color: #454242;
     }
 
+    &--light &__close {
+        .hw_svg__fill {
+            fill: #454242;
+        }
+    }
+
+    &--dark &__close {
+        .hw_svg__fill {
+            fill: #ffefd7;
+        }
+    }
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -115,7 +127,7 @@
         left: 0;
         opacity: 0.8;
         z-index: 3;
-        background-color: rgb(138, 255, 230);
+        background-color: rgb(255, 243, 177);
     }
 }
 

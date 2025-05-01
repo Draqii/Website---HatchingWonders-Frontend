@@ -1,3 +1,14 @@
-.home {
+.hw_home {
+    &__title {
+        margin-bottom: -20px;
+    }
+    .hw_heading {
+        font-family: "BowlbyOneSC";
+    }
+    &__carousell {
 
+    }
+    &__carousellitem {
+        width: 20%;
+    }
 }

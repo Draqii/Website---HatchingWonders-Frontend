@@ -1,8 +1,10 @@
 {
     "english": {
-        "title": "Welcome To Hatching Wonders!"
+        "title": "Welcome To Hatching Wonders!",
+        "subtitle": "Worlds Fieriest Creative Agency!"
     },
     "german": {
-        "title": "Willkommen Zu Hatching Wonders!"
+        "title": "Willkommen Zu Hatching Wonders!",
+        "subtitle": ""
     }
 }

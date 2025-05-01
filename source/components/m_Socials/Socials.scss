@@ -22,21 +22,25 @@
     }
     &__instagram {
         .hw_socials__text {
-            color: #C6309B;
+            color: #C6309B !important;
         }
         background-color: #FFBB29;
     }
     &__facebook {
         .hw_socials__text {
-            color: #3764B9;
+            color: #3764B9 !important;
         }
         background-color: #A3A4E0;
     }
     &__discord {
         .hw_socials__text {
-            color: #5865F2;
+            color: #5865F2 !important;
         }
         background-color: #46CAAB;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
