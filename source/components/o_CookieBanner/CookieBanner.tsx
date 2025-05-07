@@ -78,18 +78,21 @@ const CookieBanner = ({ cookieConsent, id, source, onConsentChange, language, th
             </div>
             <div className="hw_cookiebanner__controls">
                 <Button 
+                    isEnabled={true}
                     theme={theme}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 
                     children={texts[language]["button1"]} 
                     onClick={() => updateConsent("all")} />
                 <Button 
+                    isEnabled={true}
                     theme={theme}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 
                     children={texts[language]["button2"]} 
                     onClick={() => updateConsent("required")} />
                 <Button 
+                    isEnabled={true}
                     theme={theme}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 

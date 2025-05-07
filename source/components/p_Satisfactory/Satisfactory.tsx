@@ -18,6 +18,7 @@ const Satisfactory = ({ language, theme, className }: SatisfactoryProps) => {
     return (
         <div className={setClass("hw_satisfactory", [theme], className)}>
             <Button
+                isEnabled={true}
                 theme={theme}
                 isPrimary={false}
                 children={"Calculate"}

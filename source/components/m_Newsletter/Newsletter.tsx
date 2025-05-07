@@ -53,6 +53,7 @@ const Newsletter = ({language, theme, className}: NewsletterProps) => {
                 children={error} 
                 theme={theme === "light" ? "dark" : "light"} />) : null}
             <Button 
+                isEnabled={true}
                 className="hw_newsletter__button"
                 isPrimary={false} 
                 theme={theme} 

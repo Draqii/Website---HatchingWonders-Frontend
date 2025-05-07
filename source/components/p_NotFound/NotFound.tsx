@@ -60,6 +60,7 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
                         size={"medium"}
                     >{texts[language]["section2_text"]}</Paragraph>
                     <Button
+                        isEnabled={true}
                         theme={theme}
                         isPrimary={true}
                         children={texts[language]["section2_button"]}
@@ -77,6 +78,7 @@ const NotFound = ({ language, theme, className }: NotFoundProps) => {
                         size={"medium"}
                     >{texts[language]["section3_text"]}</Paragraph>
                     <Button
+                        isEnabled={true}
                         theme={theme}
                         isPrimary={false}
                         children={texts[language]["section3_button"]}

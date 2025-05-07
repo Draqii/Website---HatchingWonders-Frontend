@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { HomeProps } from "./Home.types";
-import Heading from "../../../../../libraries/component_library/source/components/a_Heading/Heading";
 import texts from "./Home.json"
 import "./Home.scss";
-import { Paragraph } from "da-awesome-library/build";
+import { Paragraph, Heading } from "da-awesome-library/build";
 
 const Home = ({language, theme, className}: HomeProps) => {
 
