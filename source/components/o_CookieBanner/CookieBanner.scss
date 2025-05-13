@@ -17,7 +17,6 @@
         text-align: left;
     }
 
-
     @media only screen and (min-width: 740px) { 
         width: 620px;
         left: calc(50% - 350px);
@@ -48,7 +47,7 @@
         background-color: #ffff;
     }
     &--dark &__close {
-        background-color: #454242;
+        background-color: #ffefd7;
     }
 
     &--light &__close {
@@ -59,7 +58,7 @@
 
     &--dark &__close {
         .hw_svg__fill {
-            fill: #ffefd7;
+            fill: #454242;
         }
     }
 

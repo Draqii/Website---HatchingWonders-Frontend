@@ -45,29 +45,29 @@ const CookieBanner = ({ cookieConsent, id, source, onConsentChange, language, th
         <div id={id} className={setClass("hw_cookiebanner", [theme, source==="page"?"page":""], className)}>
             <Heading 
                 className="hw_cookiebanner__title"
-                theme={theme === "light" ? "dark" : "light"} 
+                theme={theme === "light" ? "dark" : "dark"} 
                 children={texts[language]["title"]} 
                 size={"xxlarge"} />
             <Paragraph
                 className="hw_cookiebanner__text"
-                theme={theme === "light" ? "dark" : "light"}
+                theme={theme === "light" ? "dark" : "dark"}
                 children={texts[language]["text"]}
                 size="large"
             />
             <Icon 
                 onClick={() => closeBanner()} 
-                theme={theme === "light" ? "light" : "dark"} 
+                theme={theme === "light" ? "dark" : "dark"} 
                 className="hw_cookiebanner__close" 
                 ReactSVG={SVG_Close} />
 
             <div className="hw_cookiebanner__options">
                 <Heading 
-                    theme={theme === "light" ? "dark" : "light"} 
+                    theme={theme === "light" ? "dark" : "dark"} 
                     className="hw_cookiebanner__title"
                     children={texts[language]["table_title"]} 
                     size={"xlarge"} />
                     <Table 
-                        theme={theme === "light" ? "dark" : "light"}
+                        theme={theme === "light" ? "dark" : "dark"}
                         data={({
                             headings: [texts[language]["table1_heading1"], texts[language]["table1_heading2"], , texts[language]["table1_heading3"]], 
                             rows: existing_cookies.map((cookie, cookieID) => ({columns: [
@@ -79,21 +79,21 @@ const CookieBanner = ({ cookieConsent, id, source, onConsentChange, language, th
             <div className="hw_cookiebanner__controls">
                 <Button 
                     isEnabled={true}
-                    theme={theme}  
+                    theme={"light"}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 
                     children={texts[language]["button1"]} 
                     onClick={() => updateConsent("all")} />
                 <Button 
                     isEnabled={true}
-                    theme={theme}  
+                    theme={"light"}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 
                     children={texts[language]["button2"]} 
                     onClick={() => updateConsent("required")} />
                 <Button 
                     isEnabled={true}
-                    theme={theme}  
+                    theme={"light"}  
                     className="hw_cookiebanner__button" 
                     isPrimary={false} 
                     children={source==="page" ? texts[language]["button3b"] : texts[language]["button3a"]} 
